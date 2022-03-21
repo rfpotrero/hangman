@@ -32,8 +32,8 @@
    3. Fixed bugs
       * Pending to review this using the Issues section in Github.
    4. Supported screens and browsers
-    * Iphone 6,7,8 
-    * More to come
+      * Iphone 6,7,8 
+      * More to come
 9. Deployment
    9.1 via gitpod
    9.2 via github pages
