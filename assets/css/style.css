@@ -9,7 +9,7 @@ body{
 }
 
 .title h1 {
-    margin: 20%  1%;
+    margin: 5rem 1rem;
     text-align: center;
 }
 
@@ -19,3 +19,18 @@ body{
     text-align: center;
 }
 
+.box-selection {
+    display: flex;
+    margin: 3rem;
+    gap: 2rem;
+    text-align: center;
+}
+
+.box-selection > * {
+    flex:1;
+    padding: 1em;
+}
+
+.selection {
+    font-size: 1.25em;
+}
