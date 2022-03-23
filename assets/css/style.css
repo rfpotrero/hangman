@@ -8,6 +8,7 @@ body{
     background-color: rgb(220, 206, 206);
 }
 
+/* Index page style */
 .title h1 {
     margin: 5rem 1rem;
     text-align: center;
@@ -33,4 +34,44 @@ body{
 
 .selection {
     font-size: 1.25em;
+}
+
+
+/* Game page Style */
+
+.keyboard {
+    text-align: center;
+}
+
+.key {
+    border: 1px solid;
+    background-color: beige;
+    padding: 0.5em;
+}
+
+.keyboard-row-one {
+    display: flex;
+    margin: 0rem 0.5rem 0rem 0.5rem;
+}
+
+.keyboard-row-one * {
+    flex: 1;
+}
+
+.keyboard-row-two {
+    display: flex;
+    margin: 0rem 0.5rem 0rem 0.5rem;
+}
+
+.keyboard-row-two * {
+    flex: 1;
+}
+
+.keyboard-row-three {
+    display: flex;
+    margin: 0rem 0.5rem 0rem 0.5rem;
+}
+
+.keyboard-row-three * {
+    flex: 1;
 }
