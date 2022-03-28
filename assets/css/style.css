@@ -39,7 +39,41 @@ body{
 
 /* Game page Style */
 
+.game-selection {
+    margin: 4rem 1rem 1rem 1rem;
+    text-align: center;
+}
+
+.box-graphic {
+    text-align: center;
+    width: 20em;
+    height: 20em;
+    border: 1px solid;
+    margin: 0 auto;
+    font-size: 10px;
+}
+
+#draw-graphic {
+   height: 100%;
+   width: 100%;
+}
+
+.challenge-name{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.container{
+    text-align: center;
+}
+
+.lives-text{
+    padding-top: 0.5rem;
+}
+
 .keyboard {
+    margin-top: 2rem;
     text-align: center;
 }
 

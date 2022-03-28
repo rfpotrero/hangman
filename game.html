@@ -9,21 +9,27 @@
 </head>
 <body>
     <section class="game-selection">
-        <div>box with the selection source</div>
+        <div>
+           <h1>You have selected the `${sourceType}` category </h1> 
+        </div>
+
     </section>
     <section class="box-graphic">
-        <div class="-draw-graphic">This is a graphic</div>
+        <canvas id="draw-graphic"></canvas>
     </section>
     <section class="challenge-name">
-        <div>Name of the challenge</div>
+        <div>
+            <h4>Name of the challenge</h4>
+        </div>
     </section>
-    <section class="hint-container">
-        <div class="hit-button">hint</div>
-        <div class="hint-text">This is the hint</div>
-    </section>
-    <section class="lives-container">
-        <div class="lives-text">Lives box</div>
-        <div class="lives-number">Num</div>
+    <section class="container">
+        <div class="hit-button">
+            <h4>Press the button to display a hint</h4>
+        </div>
+        <div class="hint-text">This is the hint</div>    
+        <div class="lives-text">
+            <h4>You have: variable lives left</h4>
+        </div>
     </section>
     <section class="keyboard">
         <div class="keyboard-row-one">
@@ -61,5 +67,6 @@
             <div class="key">m</div>
         </div>
     </section>
+    <script src="script.js"></script>
 </body>
 </html>
