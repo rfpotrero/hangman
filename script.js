@@ -1,6 +1,6 @@
 // This function select random item in the array to use as a challenge.
 function newGame(sourceType){
-
+    location.replace("http://localhost:8000/game.html")
     if (sourceType === "Movies"){
     let challengeIndex = getRandomInt();
     let challengeArray = sourceMovies[challengeIndex];
