@@ -44,6 +44,7 @@ body{
     text-align: center;
 }
 
+/* Canvas style for drawing the hangman */
 .box-graphic {
     text-align: center;
     width: 20em;
@@ -58,6 +59,7 @@ body{
    width: 100%;
 }
 
+/* Challenge to be resolved styled. */
 .challenge-name{
     text-align: center;
     margin-top: 1rem;
@@ -72,6 +74,7 @@ body{
     padding-top: 0.5rem;
 }
 
+/* Keyboard styling using Flex */
 .keyboard {
     margin-top: 2rem;
     text-align: center;
