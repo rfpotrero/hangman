@@ -16,20 +16,20 @@ body{
 
 .source-selection h2 {
     font-size: 1.5em;
-    margin: 3em 1em;
+    margin: 1em 1em;
     text-align: center;
 }
 
 .box-selection {
     display: flex;
-    margin: 3rem;
+    margin: 1rem;
     gap: 2rem;
     text-align: center;
 }
 
 .box-selection > * {
     flex:1;
-    padding: 1em;
+    padding: 1rem;
 }
 
 .selection {

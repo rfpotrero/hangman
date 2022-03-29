@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <section class="title">
+        <h1>Do you want to play a game?</h1>
+    </section>
+
+    <section class="source-selection">
+        <h2>Please select what from what source you want to pick!</h2>
+    </section>
+
+    <section class="box-selection">
+        <button  class="selection" type="button"
+        >Movies</button>
+        <button  class="selection" type="button"
+        >Comics</button>
+    </section>
+  <script src="script.js"></script>
+</body>
+</html>
