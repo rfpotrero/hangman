@@ -2,9 +2,10 @@
 function newGame(sourceType){
     
     if (sourceType === "Movies") {
-    let challengeIndex = getRandomInt();
-    let challengeArray = sourceMovies[challengeIndex];
-    console.log(challengeArray);
+    let challengeRandomIndex = getRandomInt();
+    let challengeTitle = sourceMovies[challengeRandomIndex];
+    generateChallenge(challengeTitle);
+    console.log(challengeTitle);
     }
 }
 
@@ -15,8 +16,14 @@ function getRandomInt() {
     return challengeItem
 }
 
-function generateChallenge(challengeArray){
-    
+function generateChallenge(challengeTitle){
+    for (let c of challengeTitle){
+        if (c === " "){
+            challengeTitleLetter.push("-")
+        }else{
+            challengeTitleLetter.push(c)
+        }
+      }    
 }
 
 function hintDisplay(){
@@ -31,6 +38,7 @@ let sourceComics = ["Batman", "Superman", "Lucifer", "Wolverine", "Daredevil"]
 
 let templatePhrase = "<h1> You have selected the Movies category </h1>";
 let phrase = document.getElementById("gameCategoryPhrase");
+let challengeTitleLetter = [];
 
 // The below create event listener for clicks.
 document.addEventListener("DOMContentLoaded", function() {
