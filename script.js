@@ -7,7 +7,7 @@ function newGame(sourceType){
     let challengeRandomIndex = getRandomInt();
     let challengeTitle = sourceMovies[challengeRandomIndex];
     generateChallenge(challengeTitle);
-    console.log(challengeTitle);
+    interactiveKeyboard();
     }
 }
 
@@ -34,6 +34,18 @@ function hintDisplay(){
 }
 
 function playAgain(){  
+}
+
+function interactiveKeyboard(){
+    let keys = document.getElementsByClassName("key");
+
+ for (let key of keys) {
+        key.addEventListener("click", function() {
+           let keyClicked = this.innerHTML;
+            key.style.backgroundColor = "blue";
+           console.log(keyClicked);
+        });          
+    }  
 }
 
 // Arrays to store the name of the callenges.
