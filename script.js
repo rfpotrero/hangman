@@ -1,4 +1,6 @@
-// This function select random item in the array to use as a challenge.
+/** Main function to run the game. 
+ * This is invoked after the page loads and the user selects the title source for the game. 
+ */
 function newGame(sourceType){
     
     if (sourceType === "Movies") {
@@ -9,21 +11,23 @@ function newGame(sourceType){
     }
 }
 
-// Function used to generated a random number./
+// Function used to generated a random number
 function getRandomInt() {
     let max = sourceMovies.length
     let challengeItem = Math.floor(Math.random() * max); 
     return challengeItem
 }
 
+// Function use to display the letter of the guess title as underscores or scores if the character is a space
 function generateChallenge(challengeTitle){
     for (let c of challengeTitle){
         if (c === " "){
-            challengeTitleLetter.push("-")
+            challengeTitleLetter.push("<span>-</span>")
         }else{
-            challengeTitleLetter.push(c)
+            challengeTitleLetter.push("<span>_</span>")
         }
-      }    
+      } 
+    document.getElementById("challengeGuessLetters").innerHTML =  challengeTitleLetter.join(" ");  
 }
 
 function hintDisplay(){
@@ -49,7 +53,9 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", function() {
            let sourceType = this.innerHTML;
            newGame(sourceType);
-        });     
+        });          
     }  
+    newGame();
+    
 });
 
