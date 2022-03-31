@@ -36,6 +36,7 @@ function hintDisplay(){
 function playAgain(){  
 }
 
+// Function to make the keyboard clickable and change style when a key is pressed.
 function interactiveKeyboard(){
     let keys = document.getElementsByClassName("key");
 
@@ -44,8 +45,18 @@ function interactiveKeyboard(){
            let keyClicked = this.innerHTML;
             key.style.backgroundColor = "blue";
            console.log(keyClicked);
+           checkLetter(keyClicked, challengeTitle)
         });          
     }  
+}
+
+// Iterated through the challenge to find a match
+function checkLetter(keyClicked,challengeTitle){
+    for (let c of challengeTitle) {
+        if (keyClicked == c){
+          console.log("match")
+        }
+        };
 }
 
 // Arrays to store the name of the callenges.
