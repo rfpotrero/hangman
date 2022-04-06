@@ -15,11 +15,11 @@ let pickupLetters = []
    
 
     if (sourceType === "Movies") {
-    let challengeRandomIndex = getRandomInt();
-    let challengeTitle = sourceMovies[challengeRandomIndex];
+    let challengeTitle = sourceMovies[getRandomInt()];
     generateChallenge(challengeTitle);
-    interactiveKeyboard(challengeTitle);
+    console.log(challengeTitle)
     }
+    // interactiveKeyboard(challengeTitle);
 
     
 // Function used to generated a random number
@@ -38,8 +38,7 @@ function generateChallenge(challengeTitle){
             challengeTitleLetter.push("<span>_</span>")
         }
       } 
-   document.getElementById("challengeGuessLetters").innerHTML =  challengeTitleLetter.join(" "); 
-    console.log(challengeTitleLetter); 
+   document.getElementById("challengeGuessLetters").innerHTML =  challengeTitleLetter.join(" ");
 }
 
 // Function to make the keyboard clickable and change style when a key is pressed.
