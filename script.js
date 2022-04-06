@@ -1,85 +1,94 @@
 /** Main function to run the game. 
  * This is invoked after the page loads and the user selects the title source for the game. 
  */
-function newGame(sourceType){
+function newGame(sourceType) {
 
-// Arrays to store the name of the callenges.
-let sourceMovies = ["Terminator", "The Dark Knight", "Aliens", "The Big Short"]
-let sourceComics = ["Batman", "Superman", "Lucifer", "Wolverine", "Daredevil"]
+    // Arrays to store the name of the callenges.
+    let sourceMovies = ["Terminator", "The Dark Knight", "Aliens", "The Big Short"]
+    let sourceComics = ["Batman", "Superman", "Lucifer", "Wolverine", "Daredevil"]
 
-let phrase = document.getElementById("gameCategoryPhrase");
+    let phrase = document.getElementById("gameCategoryPhrase");
 
 
-let challengeTitleLetter = [];
-let pickupLetters = []
-   
+    let challengeTitleLetter = [];  // Array use to construct the challenge replace letters by "_" and space by "-" 
+    let pickupLetters = [] // Array to store the pick letters
 
+    // This will select the correct category. 
     if (sourceType === "Movies") {
-    let challengeTitle = sourceMovies[getRandomInt()];
-    generateChallenge(challengeTitle);
-    console.log(challengeTitle)
+        let challengeTitle = sourceMovies[getRandomInt()];
+        generateChallenge(challengeTitle);
+        console.log(challengeTitle)
+        interactiveKeyboard(challengeTitle);
     }
-    // interactiveKeyboard(challengeTitle);
 
-    
-// Function used to generated a random number
-function getRandomInt() {
-    let max = sourceMovies.length
-    let challengeItem = Math.floor(Math.random() * max); 
-    return challengeItem
-}
+    // Function used to generated a random number
+    function getRandomInt() {
+        let max = sourceMovies.length
+        let challengeItem = Math.floor(Math.random() * max);
+        return challengeItem
+    }
 
-// Function use to display the letter of the guess title as underscores or scores if the character is a space
-function generateChallenge(challengeTitle){
-    for (let c of challengeTitle){
-        if (c === " "){
-            challengeTitleLetter.push("<span>-</span>")
-        }else{
-            challengeTitleLetter.push("<span>_</span>")
+    // Function use to display the letter of the guess title as underscores or scores if the character is a space
+    function generateChallenge(challengeTitle) {
+        for (let c of challengeTitle) {
+            if (c === " ") {
+                challengeTitleLetter.push("<span>-</span>")
+            } else {
+                challengeTitleLetter.push("<span>_</span>")
+            }
         }
-      } 
-   document.getElementById("challengeGuessLetters").innerHTML =  challengeTitleLetter.join(" ");
-}
+        document.getElementById("challengeGuessLetters").innerHTML = challengeTitleLetter.join(" ");
+    }
 
-// Function to make the keyboard clickable and change style when a key is pressed.
-function interactiveKeyboard(challengeTitle){
-    let keys = document.getElementsByClassName("key");
+    // Function to select check if the letter clicked is present in the challenge and update.
+    function checkChallenge(keyClicked){
+        for (let c of challengeTitle) {
+            if (c === keyClicked) {
+                challengeTitleLetter.push(keyClicked)
+                console.log("This is correct")
+            } else {
+                challengeTitleLetter.push("<span>_</span>")
+            }
+        }
+        document.getElementById("challengeGuessLetters").innerHTML = challengeTitleLetter.join(" ");
+    }
+    }
 
- for (let key of keys) {
-        key.addEventListener("click", function() {
-           let keyClicked = this.innerHTML;
-            key.style.backgroundColor = "blue";
-            pickupLetters.push(keyClicked);
-            console.log(pickupLetters);
-            for (let l of pickupLetters){
-                for ( let c of challengeTitle){
-                    if (l === c){
-                            document.getElementById("challengeGuessLetters").innerHTML =  keyClicked;
-                            console.log("match")
-                    }else{
-                        console.log("not match lose 1 life")
+    // Function to make the keyboard clickable and change style when a key is pressed.
+    // Pending to include validation in to avoid selecting the key twice.
+    function interactiveKeyboard(challengeTitle) {
+        let keys = document.getElementsByClassName("key");
+
+        for (let key of keys) {
+            key.addEventListener("click", function () {
+                let keyClicked = this.innerHTML;
+                key.style.backgroundColor = "blue";
+                pickupLetters.push(keyClicked);
+                console.log(pickupLetters);
+
+                for (let c in challengeTitle) {
+                    if (challengeTitle[c] === keyClicked) {
+                        console.log("yeah Match")
                     }
-              } 
-            } 
-        });          
-    }  
-}
-}
+                }
 
-
+            });
+        }
+    }
+}
 
 
 // The below create event listener for clicks after the page loads
-document.addEventListener("DOMContentLoaded", function() {
-    
+document.addEventListener("DOMContentLoaded", function () {
+
     let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
-        button.addEventListener("click", function() {
-           let sourceType = this.innerHTML;
-           newGame(sourceType);
-        });          
-    }  
+        button.addEventListener("click", function () {
+            let sourceType = this.innerHTML;
+            newGame(sourceType);
+        });
+    }
     newGame();
-    
+
 });
