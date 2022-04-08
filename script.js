@@ -8,8 +8,6 @@ function newGame(sourceType) {
     let sourceComics = ["Batman", "Superman", "Lucifer", "Wolverine", "Daredevil"]
 
     let phrase = document.getElementById("gameCategoryPhrase");
-    
-
 
     let challengeTitleLetter = [];  // Array use to construct the challenge replace letters by "_" and space by "-" 
     let pickupLetters = [] // Array to store the pick letters
@@ -43,16 +41,17 @@ function newGame(sourceType) {
     }
 
     // Function to select check if the letter clicked is present in the challenge and update.
-    function checkChallenge(keyClicked, challengeTitle){
+    function checkChallenge(keyClicked, challengeTitle) {
         for (let i = 0; i < challengeTitle.length; i++) {
-            if (keyClicked === challengeTitle[i] ) {
-           challengeTitleLetter.splice(i, 1, challengeTitle[i])
-           document.getElementById("challengeGuessLetters").innerHTML = challengeTitleLetter.join(" ");
-      }
-      }
+            if (keyClicked === challengeTitle[i]) {
+                challengeTitleLetter.splice(i, 1, challengeTitle[i])
+                document.getElementById("challengeGuessLetters").innerHTML = challengeTitleLetter.join(" ");
+            }
+        }
     }
 
-    // Function to make the keyboard clickable and change style when a key is pressed.
+    /** Function to create eventListeners in the keyboard. 
+     * Include letter style to identify selected letters and check the guess every time a letter is selected. */ 
     // Pending to include validation in to avoid selecting the key twice.
     function interactiveKeyboard(challengeTitle) {
         let keys = document.getElementsByClassName("key");
