@@ -41,17 +41,13 @@ function newGame(sourceType) {
     }
 
     // Function to select check if the letter clicked is present in the challenge and update.
-    function checkChallenge(keyClicked){
-        for (let c of challengeTitle) {
-            if (c === keyClicked) {
-                challengeTitleLetter.push(keyClicked)
-                console.log("This is correct")
-            } else {
-                challengeTitleLetter.push("<span>_</span>")
-            }
-        }
-        document.getElementById("challengeGuessLetters").innerHTML = challengeTitleLetter.join(" ");
-    }
+    function checkChallenge(keyClicked, challengeTitle){
+        for (let i = 0; i < challengeTitle.length; i++) {
+            if (keyClicked === challengeTitle[i] ) {
+           challengeTitleLetter.splice(i, 1, challengeTitle[i])
+           document.getElementById("challengeGuessLetters").innerHTML = challengeTitleLetter.join(" ");
+      }
+      }
     }
 
     // Function to make the keyboard clickable and change style when a key is pressed.
@@ -65,19 +61,11 @@ function newGame(sourceType) {
                 key.style.backgroundColor = "blue";
                 pickupLetters.push(keyClicked);
                 console.log(pickupLetters);
-
-                for (let c in challengeTitle) {
-                    if (challengeTitle[c] === keyClicked) {
-                        console.log("yeah Match")
-                    }
-                }
-
+                checkChallenge(keyClicked, challengeTitle)
             });
         }
     }
 }
-
-
 // The below create event listener for clicks after the page loads
 document.addEventListener("DOMContentLoaded", function () {
 
