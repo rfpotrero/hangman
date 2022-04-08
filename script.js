@@ -8,10 +8,12 @@ function newGame(sourceType) {
     let sourceComics = ["Batman", "Superman", "Lucifer", "Wolverine", "Daredevil"]
 
     let phrase = document.getElementById("gameCategoryPhrase");
+    
 
 
     let challengeTitleLetter = [];  // Array use to construct the challenge replace letters by "_" and space by "-" 
     let pickupLetters = [] // Array to store the pick letters
+    let livesLeft = "9"
 
     // This will select the correct category. 
     if (sourceType === "Movies") {
