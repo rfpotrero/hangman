@@ -3,6 +3,8 @@
  */
 function newGame(sourceType){
     
+    livesNumber = 9;
+
     if (sourceType === "Movies") {
     let challengeRandomIndex = getRandomInt();
     let challengeTitle = sourceMovies[challengeRandomIndex];
@@ -52,14 +54,19 @@ function interactiveKeyboard(challengeTitle){
 
 // Iterated through the challenge to find a match
 function checkChallenge(keyClicked, challengeTitle){
+    let letterFound = false;
     for (let i = 0; i < challengeTitle.length; i++) {
-          if (keyClicked === challengeTitle[i] ) {
+          if (keyClicked === challengeTitle[i]) {
          challengeTitleLetter.splice(i, 1, challengeTitle[i])
          document.getElementById("challengeGuessLetters").innerHTML = challengeTitleLetter.join(" ");
+         letterFound = true;
+        }
     }
+    if (letterFound == false){
+        livesNumber = livesNumber -1
+        console.log(livesNumber)
     }
 }
-
 
 // Arrays to store the name of the callenges.
 let sourceMovies = ["terminator", "the Dark Knight", "aliens", "the Big Short"]
@@ -68,6 +75,7 @@ let sourceComics = ["batman", "superman", "lucifer", "wolverine", "daredevil"]
 let templatePhrase = "<h1> You have selected the Movies category </h1>";
 let phrase = document.getElementById("gameCategoryPhrase");
 let challengeTitleLetter = [];
+let livesNumber = 
 
 // The below create event listener for clicks.
 document.addEventListener("DOMContentLoaded", function() {
@@ -83,4 +91,3 @@ document.addEventListener("DOMContentLoaded", function() {
     newGame();
     
 });
-
