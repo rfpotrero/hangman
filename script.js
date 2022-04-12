@@ -62,8 +62,8 @@ function checkChallenge(keyClicked, challengeTitle){
 
 
 // Arrays to store the name of the callenges.
-let sourceMovies = ["Terminator", "The Dark Knight", "Aliens", "The Big Short"]
-let sourceComics = ["Batman", "Superman", "Lucifer", "Wolverine", "Daredevil"]
+let sourceMovies = ["terminator", "the Dark Knight", "aliens", "the Big Short"]
+let sourceComics = ["batman", "superman", "lucifer", "wolverine", "daredevil"]
 
 let templatePhrase = "<h1> You have selected the Movies category </h1>";
 let phrase = document.getElementById("gameCategoryPhrase");
