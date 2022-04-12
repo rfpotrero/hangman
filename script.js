@@ -7,7 +7,7 @@ function newGame(sourceType){
     let challengeRandomIndex = getRandomInt();
     let challengeTitle = sourceMovies[challengeRandomIndex];
     generateChallenge(challengeTitle);
-    interactiveKeyboard();
+    interactiveKeyboard(challengeTitle);
     }
 }
 
@@ -37,7 +37,7 @@ function playAgain(){
 }
 
 // Function to make the keyboard clickable and change style when a key is pressed.
-function interactiveKeyboard(){
+function interactiveKeyboard(challengeTitle){
     let keys = document.getElementsByClassName("key");
 
  for (let key of keys) {
@@ -45,19 +45,21 @@ function interactiveKeyboard(){
            let keyClicked = this.innerHTML;
             key.style.backgroundColor = "blue";
            console.log(keyClicked);
-           checkLetter(keyClicked, challengeTitle)
+           checkChallenge(keyClicked, challengeTitle)
         });          
     }  
 }
 
 // Iterated through the challenge to find a match
-function checkLetter(keyClicked,challengeTitle){
-    for (let c of challengeTitle) {
-        if (keyClicked == c){
-          console.log("match")
-        }
-        };
+function checkChallenge(keyClicked, challengeTitle){
+    for (let i = 0; i < challengeTitle.length; i++) {
+          if (keyClicked === challengeTitle[i] ) {
+         challengeTitleLetter.splice(i, 1, challengeTitle[i])
+         document.getElementById("challengeGuessLetters").innerHTML = challengeTitleLetter.join(" ");
+    }
+    }
 }
+
 
 // Arrays to store the name of the callenges.
 let sourceMovies = ["Terminator", "The Dark Knight", "Aliens", "The Big Short"]
