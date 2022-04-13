@@ -4,6 +4,8 @@
 function newGame(sourceType){
     
     livesNumber = 9;
+    document.getElementById("number-lives").innerHTML =  `<span>${livesNumber}</span>`;
+
 
     if (sourceType === "Movies") {
     let challengeRandomIndex = getRandomInt();
@@ -60,22 +62,25 @@ function checkChallenge(keyClicked, challengeTitle){
          challengeTitleLetter.splice(i, 1, challengeTitle[i])
          document.getElementById("challengeGuessLetters").innerHTML = challengeTitleLetter.join(" ");
          letterFound = true;
+         console.log(challengeTitleLetter)
         }
     }
     if (letterFound == false){
         livesNumber = livesNumber -1
         console.log(livesNumber)
+        document.getElementById("number-lives").innerHTML =  `<span>${livesNumber}</span>`;
     }
 }
 
 // Arrays to store the name of the callenges.
-let sourceMovies = ["terminator", "the Dark Knight", "aliens", "the Big Short"]
+let sourceMovies = ["terminator", "the dark knight", "aliens", "the big short"]
 let sourceComics = ["batman", "superman", "lucifer", "wolverine", "daredevil"]
 
 let templatePhrase = "<h1> You have selected the Movies category </h1>";
 let phrase = document.getElementById("gameCategoryPhrase");
 let challengeTitleLetter = [];
-let livesNumber = 
+let livesNumber = 0
+
 
 // The below create event listener for clicks.
 document.addEventListener("DOMContentLoaded", function() {
@@ -87,7 +92,5 @@ document.addEventListener("DOMContentLoaded", function() {
            let sourceType = this.innerHTML;
            newGame(sourceType);
         });          
-    }  
-    newGame();
-    
+    }      
 });
