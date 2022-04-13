@@ -34,11 +34,23 @@ function generateChallenge(challengeTitle){
     document.getElementById("challengeGuessLetters").innerHTML =  challengeTitleLetter.join(" ");  
 }
 
-function hintDisplay(){
+function checkResult(challengeTitle,challengeTitleLetter,livesNumber){
+    if (challengeTitle == challengeTitleLetter.join("")){
+        challengeCompleted()
+    } else if (livesNumber == 0){
+        challengeFailed()
+    }
 }
 
-function playAgain(){  
+function challengeCompleted(){
+    console.log("Challenge Completed");
 }
+
+function challengeFailed(){
+    console.log("Challenge Failed");
+}
+
+
 
 // Function to make the keyboard clickable and change style when a key is pressed.
 function interactiveKeyboard(challengeTitle){
@@ -70,6 +82,7 @@ function checkChallenge(keyClicked, challengeTitle){
         console.log(livesNumber)
         document.getElementById("number-lives").innerHTML =  `<span>${livesNumber}</span>`;
     }
+    checkResult(challengeTitle,challengeTitleLetter,livesNumber)
 }
 
 // Arrays to store the name of the callenges.
