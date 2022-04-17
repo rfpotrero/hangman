@@ -50,8 +50,6 @@ function challengeFailed(){
     console.log("Challenge Failed");
 }
 
-
-
 // Function to make the keyboard clickable and change style when a key is pressed.
 function interactiveKeyboard(challengeTitle){
     let keys = document.getElementsByClassName("key");
@@ -93,7 +91,6 @@ let templatePhrase = "<h1> You have selected the Movies category </h1>";
 let phrase = document.getElementById("gameCategoryPhrase");
 let challengeTitleLetter = [];
 let livesNumber = 0
-
 
 // The below create event listener for clicks.
 document.addEventListener("DOMContentLoaded", function() {
