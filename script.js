@@ -3,9 +3,11 @@
  */
 function newGame(sourceType){
     
-    livesNumber = 9;
+    livesNumber = 9; 
+    hangmanParts = 0;
     document.getElementById("number-lives").innerHTML =  `<span>${livesNumber}</span>`;
 
+    document.getElementById("draw-graphic").innerHTML = '<img src="assets/images/hangmanDrawing/0.jpg" />'
 
     if (sourceType === "Movies") {
     let challengeRandomIndex = getRandomInt();
@@ -50,6 +52,7 @@ function challengeFailed(){
     console.log("Challenge Failed");
 }
 
+
 // Function to make the keyboard clickable and change style when a key is pressed.
 function interactiveKeyboard(challengeTitle){
     let keys = document.getElementsByClassName("key");
@@ -62,6 +65,15 @@ function interactiveKeyboard(challengeTitle){
            checkChallenge(keyClicked, challengeTitle)
         });          
     }  
+}
+
+function hangmanDraw(hangmanParts){
+
+    let hangmanSketch = HANGMAN_STEPS[hangmanParts]
+    console.log(HANGMAN_STEPS[hangmanParts])
+    document.getElementById("draw-graphic").innerHTML = ` <img src="assets/images/hangmanDrawing/${hangmanSketch}" alt="Drawn of a hangman" />
+    `
+
 }
 
 // Iterated through the challenge to find a match
@@ -77,20 +89,25 @@ function checkChallenge(keyClicked, challengeTitle){
     }
     if (letterFound == false){
         livesNumber = livesNumber -1
+        hangmanParts = hangmanParts + 1
         console.log(livesNumber)
         document.getElementById("number-lives").innerHTML =  `<span>${livesNumber}</span>`;
+        hangmanDraw(hangmanParts);
+
     }
     checkResult(challengeTitle,challengeTitleLetter,livesNumber)
 }
 
 // Arrays to store the name of the callenges.
-let sourceMovies = ["terminator", "the dark knight", "aliens", "the big short"]
-let sourceComics = ["batman", "superman", "lucifer", "wolverine", "daredevil"]
+const sourceMovies = ["terminator", "the dark knight", "aliens", "the big short"]
+const sourceComics = ["batman", "superman", "lucifer", "wolverine", "daredevil"]
+const HANGMAN_STEPS = ["0.jpg","1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg"]
 
 let templatePhrase = "<h1> You have selected the Movies category </h1>";
 let phrase = document.getElementById("gameCategoryPhrase");
-let challengeTitleLetter = [];
+let challengeTitleLetter = []
 let livesNumber = 0
+let hangmanParts = 9
 
 // The below create event listener for clicks.
 document.addEventListener("DOMContentLoaded", function() {
@@ -102,5 +119,5 @@ document.addEventListener("DOMContentLoaded", function() {
            let sourceType = this.innerHTML;
            newGame(sourceType);
         });          
-    }      
+    } 
 });
