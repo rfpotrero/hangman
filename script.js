@@ -3,7 +3,7 @@
  */
 function newGame(sourceType){
     
-    livesNumber = 9; 
+    livesNumber = 10; 
     hangmanParts = 0;
     document.getElementById("number-lives").innerHTML =  `<span>${livesNumber}</span>`;
 
@@ -67,15 +67,6 @@ function interactiveKeyboard(challengeTitle){
     }  
 }
 
-function hangmanDraw(hangmanParts){
-
-    let hangmanSketch = HANGMAN_STEPS[hangmanParts]
-    console.log(HANGMAN_STEPS[hangmanParts])
-    document.getElementById("draw-graphic").innerHTML = ` <img src="assets/images/hangmanDrawing/${hangmanSketch}" alt="Drawn of a hangman" />
-    `
-
-}
-
 // Iterated through the challenge to find a match
 function checkChallenge(keyClicked, challengeTitle){
     let letterFound = false;
@@ -96,6 +87,13 @@ function checkChallenge(keyClicked, challengeTitle){
 
     }
     checkResult(challengeTitle,challengeTitleLetter,livesNumber)
+}
+
+function hangmanDraw(hangmanParts){
+
+    let hangmanSketch = HANGMAN_STEPS[hangmanParts]
+    console.log(HANGMAN_STEPS[hangmanParts])
+    document.getElementById("draw-graphic").innerHTML = ` <img src="assets/images/hangmanDrawing/${hangmanSketch}" alt="Drawn of a hangman" />`
 }
 
 // Arrays to store the name of the callenges.
