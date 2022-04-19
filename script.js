@@ -7,7 +7,7 @@ function newGame(sourceType){
     hangmanParts = 0;
     document.getElementById("number-lives").innerHTML =  `<span>${livesNumber}</span>`;
 
-    document.getElementById("draw-graphic").innerHTML = '<img src="assets/images/hangmanDrawing/0.jpg" />'
+    document.getElementById("draw-graphic").innerHTML = '<img style="height:100%;width:100%;" src="assets/images/hangmanDrawing/0.jpg" />'
 
     if (sourceType === "Movies") {
     let challengeRandomIndex = getRandomInt();
@@ -93,7 +93,7 @@ function hangmanDraw(hangmanParts){
 
     let hangmanSketch = HANGMAN_STEPS[hangmanParts]
     console.log(HANGMAN_STEPS[hangmanParts])
-    document.getElementById("draw-graphic").innerHTML = ` <img src="assets/images/hangmanDrawing/${hangmanSketch}" alt="Drawn of a hangman" />`
+    document.getElementById("draw-graphic").innerHTML = ` <img style="height:100%;width:100%;" src="assets/images/hangmanDrawing/${hangmanSketch}" alt="Drawn of a hangman" />`
 }
 
 // Arrays to store the name of the callenges.
