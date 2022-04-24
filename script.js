@@ -14,6 +14,7 @@ function newGame(sourceType){
     document.getElementById("draw-graphic").innerHTML = '<img style="height:100%;width:100%;" src="assets/images/hangmanDrawing/0.jpg" />'
 
     if (sourceType === "Movies") {
+    document.getElementById("phrase-selection").innerHTML = `<h1> You have selected the ${sourceType} category </h1>`;
     let challengeRandomIndex = getRandomInt();
     let challengeTitle = sourceMovies[challengeRandomIndex];
     generateChallenge(challengeTitle);
@@ -110,8 +111,6 @@ const sourceMovies = ["terminator", "the dark knight", "aliens", "the big short"
 const sourceComics = ["batman", "superman", "lucifer", "wolverine", "daredevil"]
 const HANGMAN_STEPS = ["0.jpg","1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg"]
 
-let templatePhrase = "<h1> You have selected the Movies category </h1>";
-let phrase = document.getElementById("gameCategoryPhrase");
 let challengeTitleLetter = []
 let livesNumber = 0
 let hangmanParts = 9
