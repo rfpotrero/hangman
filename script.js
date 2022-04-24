@@ -51,6 +51,9 @@ function challengeCompleted(){
 }
 
 function challengeFailed(){
+    document.getElementById("modal-bg").style.visibility = "unset"
+    document.getElementById("modal-lose").style.display = "unset"
+    console.log("Challenge Completed");
     console.log("Challenge Failed");
 }
 
