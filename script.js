@@ -2,10 +2,11 @@
  * This is invoked after the page loads and the user selects the title source for the game. 
  */
 function newGame(sourceType){
-    
+    // The below block re-Style the page after the user selection.
     document.querySelectorAll('.selection').forEach(function(hide) {
         hide.style.display= "none";
      });
+    document.querySelector('.box-graphic').style.height = "30em"
     
     livesNumber = 10; 
     hangmanParts = 0;
@@ -14,7 +15,7 @@ function newGame(sourceType){
     document.getElementById("draw-graphic").innerHTML = '<img style="height:100%;width:100%;" src="assets/images/hangmanDrawing/0.jpg" />'
 
     if (sourceType === "Movies") {
-    document.getElementById("phrase-selection").innerHTML = `<h1> You have selected the ${sourceType} category </h1>`;
+    document.getElementById("phrase-selection").innerHTML = `<h2> You have selected the ${sourceType} category </h2>`;
     let challengeRandomIndex = getRandomInt();
     let challengeTitle = sourceMovies[challengeRandomIndex];
     generateChallenge(challengeTitle);
