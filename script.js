@@ -2,7 +2,10 @@
  * This is invoked after the page loads and the user selects the title source for the game. 
  */
 function newGame(sourceType){
-
+    
+    document.querySelectorAll('.selection').forEach(function(hide) {
+        hide.style.display= "none";
+     });
     
     livesNumber = 10; 
     hangmanParts = 0;
