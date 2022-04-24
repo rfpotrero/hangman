@@ -2,10 +2,11 @@
  * This is invoked after the page loads and the user selects the title source for the game. 
  */
 function newGame(sourceType){
+
     
     livesNumber = 10; 
     hangmanParts = 0;
-    document.getElementById("number-lives").innerHTML =  `<span>${livesNumber}</span>`;
+    document.getElementById("number-lives").innerHTML =  `<span>${livesNumber} lives left</span>`;
 
     document.getElementById("draw-graphic").innerHTML = '<img style="height:100%;width:100%;" src="assets/images/hangmanDrawing/0.jpg" />'
 
@@ -87,7 +88,7 @@ function checkChallenge(keyClicked, challengeTitle){
         livesNumber = livesNumber -1
         hangmanParts = hangmanParts + 1
         console.log(livesNumber)
-        document.getElementById("number-lives").innerHTML =  `<span>${livesNumber}</span>`;
+        document.getElementById("number-lives").innerHTML =  `<span>${livesNumber} lives left</span>`;
         hangmanDraw(hangmanParts);
 
     }
