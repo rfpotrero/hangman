@@ -45,6 +45,8 @@ function checkResult(challengeTitle,challengeTitleLetter,livesNumber){
 }
 
 function challengeCompleted(){
+    document.getElementById("modal-bg").style.visibility = "unset"
+    document.getElementById("modal-win").style.display = "unset"
     console.log("Challenge Completed");
 }
 

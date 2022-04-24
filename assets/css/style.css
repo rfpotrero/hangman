@@ -118,7 +118,7 @@ button {
     flex: 1;
 }
 /* Modal popup after the game is over */
-.modal-bg{
+#modal-bg{
     position:fixed;
     top: 0;
     left: 0;
