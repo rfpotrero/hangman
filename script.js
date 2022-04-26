@@ -55,6 +55,9 @@ function challengeCompleted(){
     document.getElementById("modal-bg").style.visibility = "unset"
     document.getElementById("modal-win").style.display = "unset"
     console.log("Challenge Completed");
+    function playAgain(){
+        window.location.reload();
+    }
 }
 
 function challengeFailed(){
@@ -62,6 +65,9 @@ function challengeFailed(){
     document.getElementById("modal-lose").style.display = "unset"
     console.log("Challenge Completed");
     console.log("Challenge Failed");
+    function playAgain(){
+        window.location.reload();
+    }
 }
 
 
@@ -106,6 +112,10 @@ function hangmanDraw(hangmanParts){
     let hangmanSketch = HANGMAN_STEPS[hangmanParts]
     console.log(HANGMAN_STEPS[hangmanParts])
     document.getElementById("draw-graphic").innerHTML = ` <img style="height:100%;width:100%;" src="assets/images/hangmanDrawing/${hangmanSketch}" alt="Drawn of a hangman" />`
+}
+
+function playAgain(){
+    window.location.reload();
 }
 
 // Arrays to store the name of the callenges.
