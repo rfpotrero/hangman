@@ -44,9 +44,9 @@ function generateChallenge(challengeTitle){
 }
 
 function checkResult(challengeTitle,challengeTitleLetter,livesNumber){
-    if (challengeTitle == challengeTitleLetter.join("")){
+    if (challengeTitle === challengeTitleLetter.join("")){
         challengeCompleted()
-    } else if (livesNumber == 0){
+    } else if (livesNumber === 0){
         challengeFailed()
     }
 }
@@ -96,7 +96,7 @@ function checkChallenge(keyClicked, challengeTitle){
          console.log(challengeTitleLetter)
         }
     }
-    if (letterFound == false){
+    if (letterFound === false){
         livesNumber = livesNumber -1
         hangmanParts = hangmanParts + 1
         console.log(livesNumber)

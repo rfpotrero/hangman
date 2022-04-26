@@ -158,3 +158,51 @@ button {
     padding: 8%;
     border-radius: 14%;
 }
+
+@media screen and (min-width: 1024px) {
+
+.source-selection{
+    margin-top: 5em;
+}
+
+.challenge-name{
+    padding: 4rem;
+    font-size: 2em;
+}    
+
+.box-selection{
+    margin: 3rem;
+}
+
+.box-graphic{
+
+}
+
+.lives-text > h4{
+    font-size: 1.5rem;
+}
+
+#modal-bg{
+    height: 90vh;
+
+}
+
+#modal-win, #modal-lose{
+    background-color: aqua;
+    width: 70%;
+    height: 70%;
+    display: none;
+    border-radius: 3%;
+}
+
+#modal-win p, #modal-lose p{
+    padding-top: 25%;
+}
+
+
+
+
+
+
+
+}
