@@ -7,6 +7,7 @@ function newGame(sourceType){
         hide.style.display= "none";
      });
     document.querySelector('.box-graphic').style.height = "30em"
+    document.querySelector('.box-graphic').style.width = "25em"
     
     livesNumber = 10; 
     hangmanParts = 0;
