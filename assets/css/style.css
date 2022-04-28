@@ -5,9 +5,7 @@
 }
 
 body{
-    background-color: rgba(208, 227, 211, 0.5);
-    background: url(/assets/images/Rome_Italy_Shop_--_2013_--_3802.png) no-repeat;
-    background-position: right;
+    background-color: rgb(164 164 164);
 }
 button {
     background-color: #0407aa;
@@ -80,6 +78,7 @@ button {
 
 .lives-text{
     padding-top: 0.5rem;
+    color: #fbfbfb;
 }
 
 /* Keyboard styling using Flex */
@@ -187,7 +186,7 @@ body{
 }
 
 .box-graphic{
-
+    font-size: 95%;
 }
 
 .lives-text > h4{
