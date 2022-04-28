@@ -136,7 +136,7 @@ button {
 }
 
 #modal-win, #modal-lose{
-    background-color: aqua;
+    background-color:#dae1e1;;
     width: 70%;
     height: 70%;
     display: none;
@@ -144,7 +144,7 @@ button {
 }
 
 #modal-win p, #modal-lose p{
-    color: blueviolet;
+    color: #000000;
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 50%;
