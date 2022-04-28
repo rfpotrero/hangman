@@ -165,7 +165,8 @@ button {
 @media screen and (min-width: 1024px) {
 
 body{
-    background: url(/assets/images/2560px-Long_Room_Interior,_Trinity_College_fade.png) no-repeat center center;
+    
+    background-color:#dfdfdf; ;
 }
 
 .source-selection{
@@ -174,7 +175,7 @@ body{
 
 .source-selection h2 {
     font-size: 2.5em;
-    color: #fbfbfb;
+    color: #000000;
 }
 
 .challenge-name{
@@ -191,6 +192,7 @@ body{
 }
 
 .lives-text > h4{
+    color: ;
     font-size: 1.5rem;
 }
 
@@ -200,7 +202,6 @@ body{
 }
 
 #modal-win, #modal-lose{
-    background-color: aqua;
     width: 70%;
     height: 70%;
     display: none;
@@ -209,12 +210,11 @@ body{
 
 #modal-win p, #modal-lose p{
     padding-top: 25%;
+    font-size: 240%;
 }
 
 .key{
     padding: 0.6em;
     font-size: 1.3rem;
 }
-
-
 }

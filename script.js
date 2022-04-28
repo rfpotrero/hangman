@@ -132,6 +132,7 @@ let hangmanParts = 9
 document.addEventListener("DOMContentLoaded", function() {
     
     let buttons = document.getElementsByTagName("button");
+    document.getElementById("draw-graphic").innerHTML = ` <img style="height:100%;width:100%;" src="assets/images/48361197.jpeg" alt="Drawn of a hangman" />`
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
