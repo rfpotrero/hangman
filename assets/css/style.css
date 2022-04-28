@@ -192,13 +192,11 @@ body{
 }
 
 .lives-text > h4{
-    color: ;
     font-size: 1.5rem;
 }
 
 #modal-bg{
     height: 90vh;
-
 }
 
 #modal-win, #modal-lose{
