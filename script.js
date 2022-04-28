@@ -16,17 +16,23 @@ function newGame(sourceType){
     document.getElementById("draw-graphic").innerHTML = '<img style="height:100%;width:100%;" src="assets/images/hangmanDrawing/0.jpg" />'
 
     if (sourceType === "Movies") {
-    document.getElementById("phrase-selection").innerHTML = `<h2> You have selected the ${sourceType} category </h2>`;
-    let challengeRandomIndex = getRandomInt();
-    let challengeTitle = sourceMovies[challengeRandomIndex];
-    generateChallenge(challengeTitle);
-    interactiveKeyboard(challengeTitle);
+        document.getElementById("phrase-selection").innerHTML = `<h2> You have selected the ${sourceType} category </h2>`;
+        let challengeRandomIndex = getRandomInt();
+        let challengeTitle = SOURCE_MOVIES[challengeRandomIndex];
+        generateChallenge(challengeTitle);
+        interactiveKeyboard(challengeTitle);
+    }else if(sourceType === "Comics") {
+        document.getElementById("phrase-selection").innerHTML = `<h2> You have selected the ${sourceType} category </h2>`;
+        let challengeRandomIndex = getRandomInt();
+        let challengeTitle = SOURCE_COMICS[challengeRandomIndex];
+        generateChallenge(challengeTitle);
+        interactiveKeyboard(challengeTitle);
     }
 }
 
 // Function used to generated a random number
 function getRandomInt() {
-    let max = sourceMovies.length
+    let max = SOURCE_MOVIES.length
     let challengeItem = Math.floor(Math.random() * max); 
     return challengeItem
 }
@@ -120,8 +126,8 @@ function playAgain(){
 }
 
 // Arrays to store the name of the callenges.
-const sourceMovies = ["TERMINATOR", "ALIENS","SICARIO","EXMACHINA","MALEFICENT","INTERSTELLAR","DIVERGENT","HERCULES","ROBOCOP","BIRDMAN","RUSH","BRAVEHEART"]
-const sourceComics = ["BATMAN", "SUPERMAN", "LUCIFER", "WOLVERINE", "DAREDEVIL","HELLBLAZER","HELLBOY","SAGA","AVENGERS","SLAINE"]
+const SOURCE_MOVIES = ["TERMINATOR", "ALIENS","SICARIO","EXMACHINA","MALEFICENT","INTERSTELLAR","DIVERGENT","HERCULES","ROBOCOP","BIRDMAN","RUSH","BRAVEHEART"]
+const SOURCE_COMICS = ["BATMAN", "SUPERMAN", "LUCIFER", "WOLVERINE", "DAREDEVIL","HELLBLAZER","HELLBOY","SAGA","AVENGERS","SLAINE"]
 const HANGMAN_STEPS = ["0.jpg","1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg"]
 
 let challengeTitleLetter = []
