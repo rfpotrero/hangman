@@ -119,8 +119,8 @@ function playAgain(){
 }
 
 // Arrays to store the name of the callenges.
-const sourceMovies = ["terminator", "the dark knight", "aliens", "the big short"]
-const sourceComics = ["batman", "superman", "lucifer", "wolverine", "daredevil"]
+const sourceMovies = ["TERMINATOR", "ALIENS","SICARIO","EXMACHINA","MALEFICENT","INTERSTELLAR","DIVERGENT","HERCULES","ROBOCOP","BIRDMAN","RUSH","BRAVEHEART"]
+const sourceComics = ["BATMAN", "SUPERMAN", "LUCIFER", "WOLVERINE", "DAREDEVIL","HELLBLAZER","HELLBOY","SAGA","AVENGERS","SLAINE"]
 const HANGMAN_STEPS = ["0.jpg","1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg"]
 
 let challengeTitleLetter = []
