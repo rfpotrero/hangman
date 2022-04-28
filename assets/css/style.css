@@ -5,8 +5,9 @@
 }
 
 body{
-    background-color: rgb(164 164 164);
+    background-color: rgb(228 226 226);
 }
+
 button {
     background-color: #0407aa;
     color: white;
@@ -24,7 +25,7 @@ button {
     font-size: 1.5em;
     margin: 1em 1em;
     text-align: center;
-    color: #fbfbfb;
+    color: #151515;
 }
 
 .box-selection {
@@ -78,7 +79,7 @@ button {
 
 .lives-text{
     padding-top: 0.5rem;
-    color: #fbfbfb;
+    color: #151515;
 }
 
 /* Keyboard styling using Flex */
@@ -89,7 +90,7 @@ button {
 
 .key {
     border: 1px solid;
-    background-color: #f1e0bf;
+    background-color: #ddf6ef;
     padding: 0.5em;
 }
 
