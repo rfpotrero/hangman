@@ -78,7 +78,8 @@ function interactiveKeyboard(challengeTitle){
  for (let key of keys) {
         key.addEventListener("click", function() {
            let keyClicked = this.innerHTML;
-            key.style.backgroundColor = "blue";
+            key.style.backgroundColor = "#6868e9";
+            key.style.color = "#d9cbcb";
            console.log(keyClicked);
            checkChallenge(keyClicked, challengeTitle)
         });          
