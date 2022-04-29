@@ -215,4 +215,30 @@ body{
     padding: 0.6em;
     font-size: 1.3rem;
 }
+
+@media screen and (min-width: 1240px){
+    .source-selection {
+        margin-top: 2em;
+    }
+
+    .source-selection > h2 {
+        font-size: 2em;
+    }
+
+    .box-graphic{
+        float: left;
+        margin-left: 18%;
+        margin-bottom: 1%;
+        font-size: 60%;
+    }
+
+    .box-selection{
+        margin: 0;
+    }
+
+    .keyboard{
+        clear: both;
+    }
+
+}
 }
