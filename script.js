@@ -13,7 +13,7 @@ function newGame(sourceType){
     hangmanParts = 0;
     document.getElementById("number-lives").innerHTML =  `<span>${livesNumber} lives left</span>`;
 
-    document.getElementById("draw-graphic").innerHTML = '<img style="height:100%;width:100%;" src="assets/images/hangmanDrawing/0.jpg" />'
+    document.getElementById("draw-graphic").innerHTML = '<img style="height:100%;width:100%;" src="assets/images/hangmanDrawing/0.jpg" />';
 
     if (sourceType === "Movies") {
         document.getElementById("phrase-selection").innerHTML = `<h2> You have selected the ${sourceType} category </h2>`;
@@ -34,16 +34,16 @@ function newGame(sourceType){
 function getRandomInt() {
     let max = SOURCE_MOVIES.length
     let challengeItem = Math.floor(Math.random() * max); 
-    return challengeItem
+    return challengeItem;
 }
 
 // Function use to display the letter of the guess title as underscores or scores if the character is a space
 function generateChallenge(challengeTitle){
     for (let c of challengeTitle){
         if (c === " "){
-            challengeTitleLetter.push("<span>-</span>")
+            challengeTitleLetter.push("<span>-</span>");
         }else{
-            challengeTitleLetter.push("<span>_</span>")
+            challengeTitleLetter.push("<span>_</span>");
         }
       } 
     document.getElementById("challengeGuessLetters").innerHTML =  challengeTitleLetter.join(" ");  
@@ -51,15 +51,15 @@ function generateChallenge(challengeTitle){
 
 function checkResult(challengeTitle,challengeTitleLetter,livesNumber){
     if (challengeTitle === challengeTitleLetter.join("")){
-        challengeCompleted()
+        challengeCompleted();
     } else if (livesNumber === 0){
-        challengeFailed()
+        challengeFailed();
     }
 }
 
 function challengeCompleted(){
-    document.getElementById("modal-bg").style.visibility = "unset"
-    document.getElementById("modal-win").style.display = "unset"
+    document.getElementById("modal-bg").style.visibility = "unset";
+    document.getElementById("modal-win").style.display = "unset";
     console.log("Challenge Completed");
     function playAgain(){
         window.location.reload();
@@ -67,8 +67,8 @@ function challengeCompleted(){
 }
 
 function challengeFailed(){
-    document.getElementById("modal-bg").style.visibility = "unset"
-    document.getElementById("modal-lose").style.display = "unset"
+    document.getElementById("modal-bg").style.visibility = "unset";
+    document.getElementById("modal-lose").style.display = "unset";
     console.log("Challenge Completed");
     console.log("Challenge Failed");
     function playAgain(){
@@ -87,7 +87,7 @@ function interactiveKeyboard(challengeTitle){
             key.style.backgroundColor = "#6868e9";
             key.style.color = "#d9cbcb";
            console.log(keyClicked);
-           checkChallenge(keyClicked, challengeTitle)
+           checkChallenge(keyClicked, challengeTitle);
         });          
     }  
 }
@@ -97,28 +97,28 @@ function checkChallenge(keyClicked, challengeTitle){
     let letterFound = false;
     for (let i = 0; i < challengeTitle.length; i++) {
           if (keyClicked === challengeTitle[i]) {
-         challengeTitleLetter.splice(i, 1, challengeTitle[i])
+         challengeTitleLetter.splice(i, 1, challengeTitle[i]);
          document.getElementById("challengeGuessLetters").innerHTML = challengeTitleLetter.join(" ");
          letterFound = true;
-         console.log(challengeTitleLetter)
+         console.log(challengeTitleLetter);
         }
     }
     if (letterFound === false){
-        livesNumber = livesNumber -1
-        hangmanParts = hangmanParts + 1
-        console.log(livesNumber)
+        livesNumber = livesNumber -1;
+        hangmanParts = hangmanParts + 1;
+        console.log(livesNumber);
         document.getElementById("number-lives").innerHTML =  `<span>${livesNumber} lives left</span>`;
         hangmanDraw(hangmanParts);
 
     }
-    checkResult(challengeTitle,challengeTitleLetter,livesNumber)
+    checkResult(challengeTitle,challengeTitleLetter,livesNumber);
 }
 
 function hangmanDraw(hangmanParts){
 
     let hangmanSketch = HANGMAN_STEPS[hangmanParts]
     console.log(HANGMAN_STEPS[hangmanParts])
-    document.getElementById("draw-graphic").innerHTML = ` <img style="height:100%;width:100%;" src="assets/images/hangmanDrawing/${hangmanSketch}" alt="Drawn of a hangman" />`
+    document.getElementById("draw-graphic").innerHTML = ` <img style="height:100%;width:100%;" src="assets/images/hangmanDrawing/${hangmanSketch}" alt="Drawn of a hangman" />`;
 }
 
 function playAgain(){
@@ -126,19 +126,19 @@ function playAgain(){
 }
 
 // Arrays to store the name of the callenges.
-const SOURCE_MOVIES = ["TERMINATOR", "ALIENS","SICARIO","EXMACHINA","MALEFICENT","INTERSTELLAR","DIVERGENT","HERCULES","ROBOCOP","BIRDMAN","RUSH","BRAVEHEART"]
-const SOURCE_COMICS = ["BATMAN", "SUPERMAN", "LUCIFER", "WOLVERINE", "DAREDEVIL","HELLBLAZER","HELLBOY","SAGA","AVENGERS","SLAINE"]
-const HANGMAN_STEPS = ["0.jpg","1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg"]
+const SOURCE_MOVIES = ["TERMINATOR", "ALIENS","SICARIO","EXMACHINA","MALEFICENT","INTERSTELLAR","DIVERGENT","HERCULES","ROBOCOP","BIRDMAN","RUSH","BRAVEHEART"];
+const SOURCE_COMICS = ["BATMAN", "SUPERMAN", "LUCIFER", "WOLVERINE", "DAREDEVIL","HELLBLAZER","HELLBOY","SAGA","AVENGERS","SLAINE"];
+const HANGMAN_STEPS = ["0.jpg","1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg"];
 
-let challengeTitleLetter = []
-let livesNumber = 0
-let hangmanParts = 9
+let challengeTitleLetter = [];
+let livesNumber = 0;
+let hangmanParts = 9;
 
 // The below create event listener for clicks.
 document.addEventListener("DOMContentLoaded", function() {
     
     let buttons = document.getElementsByTagName("button");
-    document.getElementById("draw-graphic").innerHTML = ` <img style="height:100%;width:100%;" src="assets/images/48361197.jpeg" alt="Drawn of a hangman" />`
+    document.getElementById("draw-graphic").innerHTML = ` <img style="height:100%;width:100%;" src="assets/images/48361197.jpeg" alt="Drawn of a hangman" />`;
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
