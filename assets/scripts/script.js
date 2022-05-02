@@ -1,3 +1,14 @@
+// Arrays to store the name of the callenges.
+const SOURCE_MOVIES = ["TERMINATOR", "ALIENS", "SICARIO", "EXMACHINA", "MALEFICENT", "INTERSTELLAR", "DIVERGENT", "HERCULES", "ROBOCOP", "BIRDMAN", "RUSH", "BRAVEHEART"];
+const SOURCE_COMICS = ["BATMAN", "SUPERMAN", "LUCIFER", "WOLVERINE", "DAREDEVIL", "HELLBLAZER", "HELLBOY", "SAGA", "AVENGERS", "SLAINE"];
+const HANGMAN_STEPS = ["0.jpg", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg"];
+
+// Globlal variables.
+let challengeTitleLetter = [];
+let livesNumber = 0;
+let hangmanParts = 9;
+
+
 /** Main function to run the game. 
  * This is invoked after the page loads and the user selects the title source for the game. 
  */
@@ -125,14 +136,7 @@ function playAgain() {
     window.location.reload();
 }
 
-// Arrays to store the name of the callenges.
-const SOURCE_MOVIES = ["TERMINATOR", "ALIENS", "SICARIO", "EXMACHINA", "MALEFICENT", "INTERSTELLAR", "DIVERGENT", "HERCULES", "ROBOCOP", "BIRDMAN", "RUSH", "BRAVEHEART"];
-const SOURCE_COMICS = ["BATMAN", "SUPERMAN", "LUCIFER", "WOLVERINE", "DAREDEVIL", "HELLBLAZER", "HELLBOY", "SAGA", "AVENGERS", "SLAINE"];
-const HANGMAN_STEPS = ["0.jpg", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg"];
 
-let challengeTitleLetter = [];
-let livesNumber = 0;
-let hangmanParts = 9;
 
 // The below create event listener for clicks.
 document.addEventListener("DOMContentLoaded", function () {
