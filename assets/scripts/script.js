@@ -71,7 +71,6 @@ function checkResult(challengeTitle, challengeTitleLetter, livesNumber) {
 function challengeCompleted() {
     document.getElementById("modal-bg").style.visibility = "unset";
     document.getElementById("modal-win").style.display = "unset";
-    console.log("Challenge Completed");
     function playAgain() {
         window.location.reload();
     }
@@ -80,8 +79,6 @@ function challengeCompleted() {
 function challengeFailed() {
     document.getElementById("modal-bg").style.visibility = "unset";
     document.getElementById("modal-lose").style.display = "unset";
-    console.log("Challenge Completed");
-    console.log("Challenge Failed");
     function playAgain() {
         window.location.reload();
     }
@@ -97,7 +94,6 @@ function interactiveKeyboard(challengeTitle) {
             let keyClicked = this.innerHTML;
             key.style.backgroundColor = "#6868e9";
             key.style.color = "#d9cbcb";
-            console.log(keyClicked);
             checkChallenge(keyClicked, challengeTitle);
         });
     }
@@ -111,13 +107,11 @@ function checkChallenge(keyClicked, challengeTitle) {
             challengeTitleLetter.splice(i, 1, challengeTitle[i]);
             document.getElementById("challengeGuessLetters").innerHTML = challengeTitleLetter.join(" ");
             letterFound = true;
-            console.log(challengeTitleLetter);
         }
     }
     if (letterFound === false) {
         livesNumber = livesNumber - 1;
         hangmanParts = hangmanParts + 1;
-        console.log(livesNumber);
         document.getElementById("number-lives").innerHTML = `<span>${livesNumber} lives left</span>`;
         hangmanDraw(hangmanParts);
 
@@ -128,7 +122,6 @@ function checkChallenge(keyClicked, challengeTitle) {
 function hangmanDraw(hangmanParts) {
 
     let hangmanSketch = HANGMAN_STEPS[hangmanParts];
-    console.log(HANGMAN_STEPS[hangmanParts]);
     document.getElementById("draw-graphic").innerHTML = ` <img style="height:100%;width:100%;" src="assets/images/hangmanDrawing/${hangmanSketch}" alt="Drawn of a hangman" />`;
 }
 
