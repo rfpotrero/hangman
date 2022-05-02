@@ -13,6 +13,9 @@
 * Adding more sources of challenge, ie: Books, Series, etc..
 * A visiting user can choose to sacrifice one live for a hint. 
 ## Typography and color scheme
+* I have decided for a grey and back colours for the game for accesibility and rather than use plenty of graphics I wanted something that could load quite easily and didn't have troubles with responsiveness.
+* Background colour : rgb(228 226 226);
+* Font colour: #151515;
 ## Wireframes
 * Wireframes for the project can be found [HERE](docs/wireframes/).
 ## Technology
