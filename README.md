@@ -70,7 +70,7 @@
              * Clicking in the Try Again button reload the page to start a new game [HERE](docs/testCases/testcase1mobile.png)
               
    3. ### Fixed bugs
-      * Pending to review this using the Issues section in Github.
+      * Add else statement to IF loop inside newGame Function for error handling [issue23](https://github.com/rfpotrero/hangman/issues/23)
    4. ### Supported screens and browsers
       * Iphone 6,7,8 
       * Ipad Pro
@@ -85,6 +85,13 @@
       * Under Source select Main or the correct branch and click in save.
       * The website will take a few minutes to be live.
       * A 404.html was created to handle browsers error. 
+* Gitpod
+   * Gitpod can be used to deploy the site locally for testing purposes. To deploy the site follow the steps below:
+     - Navigate to project repository
+     - Click in the Gitpod button in the right.
+     - This will launch the workspace in Gitpo. Select use browser or local VS Code Studio.
+     - Navigate to the terminal, at the bottom by default, and enter the following command: python3 -m http.sever
+     - Enter the following URL in your browser http://localhost:8000/ . By default gitpod uses port 8000
 
 ## Credits
 * Code for random numbers [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
