@@ -71,7 +71,8 @@
              * Clicking in the Try Again button reload the page to start a new game [Mobile Here](docs/testCases/testcase1mobile.png) [Desktop Here](docs/testCases/testcase1desktop.png)
               
    3. ### Fixed bugs
-      * Add else statement to IF loop inside newGame Function for error handling [issue23](https://github.com/rfpotrero/hangman/issues/23)
+      * [Issue23](https://github.com/rfpotrero/hangman/issues/23) Add else statement to IF loop inside newGame Function for error handling.
+      * [Issue 24](https://github.com/rfpotrero/hangman/issues/24) Code refactoring to improve readability and fix bug introduced in issue #23.
    4. ### Supported screens and browsers
       * Iphone 6,7,8 
       * Ipad Pro
