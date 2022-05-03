@@ -39,7 +39,7 @@ function newGame(sourceType) {
         generateChallenge(challengeTitle);
         interactiveKeyboard(challengeTitle);
     }else{
-        alert("Category not found. Please contact your game administrator.")
+        alert("Category not found. Please contact your game administrator.");
         window.location.reload(); 
     }
 }
@@ -142,9 +142,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById("draw-graphic").innerHTML = ` <img style="height:100%;width:100%;" src="assets/images/48361197.jpeg" alt="Drawn of a hangman" />`;
    
-    let buttons = document.getElementsByClassName("selection")
+    let buttons = document.getElementsByClassName("selection");
     for (let button of buttons) {
-        button.addEventListener("click", gameInit)
+        button.addEventListener("click", gameInit);
     }
 
 });

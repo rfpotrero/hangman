@@ -36,6 +36,7 @@
       * HTML Validation 
         * No Error found. Report can be found [HERE](https://validator.w3.org/nu/?doc=https%3A%2F%2Frfpotrero.github.io%2Fhangman%2F)
       * Lighthouse mobile report [HERE](docs/lighthousemobilereport.png)
+      * JavaScript Validation using JShint [HERE](docs/jshint.png)
    
    2. ### Test Cases
       1. A visiting user wants to play hangman.
