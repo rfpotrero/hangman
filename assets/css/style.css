@@ -136,7 +136,7 @@ button {
 }
 
 #modal-win, #modal-lose{
-    background-color:#dae1e1;;
+    background-color:rgba(218,225,225,0.9);
     width: 70%;
     height: 70%;
     display: none;
@@ -215,8 +215,9 @@ body{
     padding: 0.6em;
     font-size: 1.3rem;
 }
+}
 
-@media screen and (min-width: 1240px){
+@media screen and (min-width: 1200px){
     .source-selection {
         margin-top: 2em;
     }
@@ -240,5 +241,7 @@ body{
         clear: both;
     }
 
-}
+    #modal-win p, #modal-lose p {
+            padding-top: 1%;
+    }
 }
