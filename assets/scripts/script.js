@@ -38,6 +38,9 @@ function newGame(sourceType) {
         let challengeTitle = SOURCE_COMICS[challengeRandomIndex];
         generateChallenge(challengeTitle);
         interactiveKeyboard(challengeTitle);
+    }else{
+        alert("Category not found. Please contact your game administrator.")
+        window.location.reload(); 
     }
 }
 
