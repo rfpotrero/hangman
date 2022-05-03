@@ -42,13 +42,13 @@
       1. A visiting user wants to play hangman.
          * User navigate to the live Hangman site [HERE](https://rfpotrero.github.io/hangman/).
            - Expected result: The welcome page will be displayed.
-           - Test successful. Page displayed correctly results [here](docs/testCases/testcase1mobile.png)
+           - Test successful. Page displayed correctly results [Mobile Here](docs/testCases/testcase1mobile.png) [Desktop Here](docs/testCases/testcase1desktop.png)
 
 
       2. A visiting user can choose the type of challenge to play in hangman.
          *  User click in the movies or comic buttons located in the welcome page. 
             - Expected Result: The buttos will disappear and the game will start with the correct source for the challenge Movies or Comics
-            - Test successful. Selection buttons disappeared and the game stars. Results [HERE](docs/testCases/tescase2mobile.png)
+            - Test successful. Selection buttons disappeared and the game stars. Results [Mobile Here](docs/testCases/tescase2mobile.png) [Desktop Here](docs/testCases/testcase2desktop.png)
 
       3. A visiting user click in the interactive keyboard to guess the challenge. 
          * User click in the interactive keyboard.
@@ -57,9 +57,9 @@
              * If the key letter pressed is present in the challenge it will change from a dash to the clicked key letter. 
              * If the key letter is not present one live will be deducted and the hangman drawing move forward 1 step.
            - Result successful:
-             * Key change background color. Result [HERE](docs/testCases/tescase3mobile1.png)
-             * If the letter is present in the challenge it is displayed. Result [HERE](docs/testCases/testcase3mobile2.png)
-             * If the letter is not present the hangman draw moves forward one steps and one is deducted. Result [HERE](docs/testCases/testcase3mobile2.png)
+             * Key change background color. Result [Mobile Here](docs/testCases/tescase3mobile1.png) [Desktop Here](docs/testCases/testcase3desktop1.png)
+             * If the letter is present in the challenge it is displayed. Result [Mobile Here](docs/testCases/testcase3mobile2.png) [Desktop Here](docs/testCases/testcase3desktop2.png)
+             * If the letter is not present the hangman draw moves forward one steps and one is deducted. Result [Mobile Here](docs/testCases/testcase3mobile2.png) [Desktop Here](docs/testCases/testcase3desktop3.png)
       4. A visiting can play as many games as they want by clicking in the play again button.
          *  Once the lives reached 0 or the challenge is resolved a pop up will present the user with a play again button. 
            - Expected Result: 
@@ -67,8 +67,8 @@
              * The page will reload directing the use to the welome page to choose the challenge source 
              * Clicking in the challenge source will start a new game. 
            - Result Successful
-             * Once the game ends the game display a popup with the result [HERE](docs/testCases/testcase4mobile.png)
-             * Clicking in the Try Again button reload the page to start a new game [HERE](docs/testCases/testcase1mobile.png)
+             * Once the game ends the game display a popup with the result [Mobile Here](docs/testCases/testcase4mobile.png) [Desktop Here](docs/testCases/testcase4desktop1.png)
+             * Clicking in the Try Again button reload the page to start a new game [Mobile Here](docs/testCases/testcase1mobile.png) [Desktop Here](docs/testCases/testcase1desktop.png)
               
    3. ### Fixed bugs
       * Add else statement to IF loop inside newGame Function for error handling [issue23](https://github.com/rfpotrero/hangman/issues/23)
