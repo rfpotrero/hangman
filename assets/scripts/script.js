@@ -132,18 +132,17 @@ function playAgain() {
     window.location.reload();
 }
 
+function gameInit(){
+    let sourceType = this.innerHTML;
+    newGame(sourceType);
+}
 
-
-// The below create event listener for clicks.
+// The below create event listener for clicks in the category buttons after the page loads.
 document.addEventListener("DOMContentLoaded", function () {
 
-    let buttons = document.getElementsByTagName("button");
     document.getElementById("draw-graphic").innerHTML = ` <img style="height:100%;width:100%;" src="assets/images/48361197.jpeg" alt="Drawn of a hangman" />`;
+   
+    let buttonCate = document.getElementById("category-btn");
+    buttonCate.addEventListener("click",gameInit);
 
-    for (let button of buttons) {
-        button.addEventListener("click", function () {
-            let sourceType = this.innerHTML;
-            newGame(sourceType);
-        });
-    }
 });
