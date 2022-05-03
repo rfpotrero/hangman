@@ -142,7 +142,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById("draw-graphic").innerHTML = ` <img style="height:100%;width:100%;" src="assets/images/48361197.jpeg" alt="Drawn of a hangman" />`;
    
-    let buttonCate = document.getElementById("category-btn");
-    buttonCate.addEventListener("click",gameInit);
+    let buttons = document.getElementsByClassName("selection")
+    for (let button of buttons) {
+        button.addEventListener("click", gameInit)
+    }
 
 });
