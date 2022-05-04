@@ -45,12 +45,21 @@ function newGame(sourceType) {
     }
 }
 
+/**
+ * Return a random number used to select the title used for the challenge
+ * @return {number} challengeItem This is a random number
+ *
+ */
 function getRandomInt() {
     let max = SOURCE_MOVIES.length;
     let challengeItem = Math.floor(Math.random() * max);
     return challengeItem;
 }
 
+/**
+ * Replace letters for underscore or dash in the case of a space.
+ * @param {string} challengeTitle 
+ */
 function generateChallenge(challengeTitle) {
     for (let c of challengeTitle) {
         if (c === " ") {
@@ -62,6 +71,13 @@ function generateChallenge(challengeTitle) {
     document.getElementById("challengeGuessLetters").innerHTML = challengeTitleLetter.join(" ");
 }
 
+/**
+ * Check if the user have guesses the correct challenge or the lives are zero
+ * 
+ * @param {string} challengeTitle Selected challenge
+ * @param {string} challengeTitleLetter Guess title
+ * @param {number} livesNumber Number of lives left
+ */
 function checkResult(challengeTitle, challengeTitleLetter, livesNumber) {
     if (challengeTitle === challengeTitleLetter.join("")) {
         challengeCompleted();
@@ -70,6 +86,9 @@ function checkResult(challengeTitle, challengeTitleLetter, livesNumber) {
     }
 }
 
+/***
+ * Displays the winnig popup and allows the user to keep playing.
+ */
 function challengeCompleted() {
     document.getElementById("modal-bg").style.visibility = "unset";
     document.getElementById("modal-win").style.display = "unset";
@@ -78,6 +97,9 @@ function challengeCompleted() {
     }
 }
 
+/***
+ * Displays the losing popup and allows the user to keep playing.
+ */
 function challengeFailed() {
     document.getElementById("modal-bg").style.visibility = "unset";
     document.getElementById("modal-lose").style.display = "unset";
@@ -105,6 +127,11 @@ function interactiveKeyboard(challengeTitle) {
     }
 }
 
+/**
+ * Check if the letter clicked is present in the challenge.
+ * @param {string} keyClicked innerHTML of the class key element
+ * @param {string} challengeTitle Challege to be solved
+ */
 function checkChallenge(keyClicked, challengeTitle) {
     let letterFound = false;
     for (let i = 0; i < challengeTitle.length; i++) {
@@ -124,16 +151,26 @@ function checkChallenge(keyClicked, challengeTitle) {
     checkResult(challengeTitle, challengeTitleLetter, livesNumber);
 }
 
+/**
+ * Draws the hangman when a letter is not present in the challenge
+ * @param {number} hangmanParts Number used to iterate through the hangman images.
+ */
 function hangmanDraw(hangmanParts) {
 
     let hangmanSketch = HANGMAN_STEPS[hangmanParts];
     document.getElementById("draw-graphic").innerHTML = ` <img style="height:100%;width:100%;" src="assets/images/hangmanDrawing/${hangmanSketch}" alt="Drawn of a hangman" />`;
 }
 
+/**
+ * Reload the page to allow the player to keep playing after pressing the button play again.
+ */
 function playAgain() {
     window.location.reload();
 }
 
+/**
+ * Initialised the game by callin newGame function.
+ */
 function gameInit(){
     let sourceType = this.innerHTML;
     newGame(sourceType);
