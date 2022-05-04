@@ -11,7 +11,7 @@
 * Able to play as many times as desired by clicking in the Play again button. 
 ## Future features
 * Adding more sources of challenge, ie: Books, Series, etc..
-* A visiting user can choose to sacrifice one live for a hint. 
+* Moving hint to a future release [Issue16](https://github.com/rfpotrero/hangman/issues/16)
 ## Typography and color scheme
 * I have decided for a grey and back colours for the game for accesibility and rather than use plenty of graphics I wanted something that could load quite easily and didn't have troubles with responsiveness.
 * Background colour : rgb(228 226 226);
