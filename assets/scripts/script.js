@@ -92,9 +92,7 @@ function checkResult(challengeTitle, challengeTitleLetter, livesNumber) {
 function challengeCompleted() {
     document.getElementById("modal-bg").style.visibility = "unset";
     document.getElementById("modal-win").style.display = "unset";
-    function playAgain() {
-        window.location.reload();
-    }
+    playAgain;
 }
 
 /***
@@ -103,9 +101,7 @@ function challengeCompleted() {
 function challengeFailed() {
     document.getElementById("modal-bg").style.visibility = "unset";
     document.getElementById("modal-lose").style.display = "unset";
-    function playAgain() {
-        window.location.reload();
-    }
+    playAgain;
 }
 
 /**
