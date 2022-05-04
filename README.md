@@ -2,7 +2,7 @@
 * Creating a hangman game to develop javascript skills. This will be achieve by using the most common actions, iterated through objects, flow control and using OOP principles, etc..
 ## User stories
 * A visiting user wants to play hangman. [Wireframe](docs/wireframes/Welcome.png) / [Issue Tracker](https://github.com/rfpotrero/hangman/issues?q=label%3A%22Game+Basis%22+)
-* A visiting user can choose the type of challenge to play in hangman. [Wireframe](docs/wireframes/Game.png) / [Issue Tracker]()
+* A visiting user can choose the type of challenge to play in hangman. [Wireframe](docs/wireframes/Game.png) / [Issue Tracker](https://github.com/rfpotrero/hangman/issues?q=is%3Aissue+label%3AChallengeSelection)
 * A visiting can play as many games as they want by clicking in the play again button. [Wireframe](docs/wireframes/Result.png) / [Issue Tracker](https://github.com/rfpotrero/hangman/issues?q=label%3A%22Game+Result%22+)
 ## Features
 * Able to select the source of the challenge (Movies or books)
