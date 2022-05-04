@@ -10,7 +10,8 @@ let hangmanParts = 9;
 
 
 /** Main function to run the game. 
- * This is invoked after the page loads and the user selects the title source for the game. 
+ * This is invoked after the page loads and the user selects the source for the game. 
+ * @param {string} sourceType innerHTML of the selection button.
  */
 function newGame(sourceType) {
     // The below block re-Style the page after the user selection.
@@ -44,14 +45,12 @@ function newGame(sourceType) {
     }
 }
 
-// Function used to generated a random number
 function getRandomInt() {
     let max = SOURCE_MOVIES.length;
     let challengeItem = Math.floor(Math.random() * max);
     return challengeItem;
 }
 
-// Function use to display the letter of the guess title as underscores or scores if the character is a space
 function generateChallenge(challengeTitle) {
     for (let c of challengeTitle) {
         if (c === " ") {
@@ -87,8 +86,11 @@ function challengeFailed() {
     }
 }
 
-
-// Function to make the keyboard clickable and change style when a key is pressed.
+/**
+ * Makes screenkeyboard interactive. After every key is pressed it check if the 
+ * letter is present in the challenge.
+ * @param {string} challengeTitle Name of the challenge to resolve.
+ */
 function interactiveKeyboard(challengeTitle) {
     let keys = document.getElementsByClassName("key");
 
@@ -102,7 +104,6 @@ function interactiveKeyboard(challengeTitle) {
     }
 }
 
-// Iterated through the challenge to find a match
 function checkChallenge(keyClicked, challengeTitle) {
     let letterFound = false;
     for (let i = 0; i < challengeTitle.length; i++) {
@@ -137,7 +138,7 @@ function gameInit(){
     newGame(sourceType);
 }
 
-// The below create event listener for clicks in the category buttons after the page loads.
+// After the DOMcontent loads an inline function add an eventlistener to the category buttons.
 document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById("draw-graphic").innerHTML = ` <img style="height:100%;width:100%;" src="assets/images/48361197.jpeg" alt="Drawn of a hangman" />`;
