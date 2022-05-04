@@ -35,7 +35,7 @@
         * CSS validation wihtout errors. Report [HERE](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Frfpotrero.github.io%2Fhangman%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
       * HTML Validation 
         * No Error found. Report can be found [HERE](https://validator.w3.org/nu/?doc=https%3A%2F%2Frfpotrero.github.io%2Fhangman%2F)
-      * Lighthouse mobile report [HERE](docs/lighthousemobilereport.png)
+      * Lighthouse mobile report [HERE](docs/lighthousemobilereport.png) Desktop report [HERE](docs/lighthouseDesktop.png)
       * JavaScript Validation using JShint. No errors were founds [HERE](docs/jshint.png)
    
    2. ### Test Cases
